@@ -43,10 +43,6 @@ def clean_phone_numbers(phone)
   end
 end
 
-def most_registered_hours()
-
-end
-
 def date_to_object(date_time)
   DateTime.strptime(date_time, "%m/%d/%Y %H:%M")
 end
@@ -90,11 +86,8 @@ contents = CSV.open(
 template_letter = File.read('form_letter.erb')
 erb_template = ERB.new template_letter
 
-
-
 hours_array = []
 days_array = []
-
 
 contents.each do |row|
   id = row[0]
